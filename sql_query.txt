@@ -1,0 +1,2 @@
+
+SELECT * FROM T1 WHERE name NOT IN (SELECT name FROM T2)

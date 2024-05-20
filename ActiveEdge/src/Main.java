@@ -10,7 +10,7 @@ public class Main {
         int smallest = a[0];
         int largest = a[length-1];
 
-        //Converting the array to a list for ease of manipulation
+        //Converting the array to a list in order to use the 'contains' method
         List<Integer> numberList = new ArrayList<>();
         for( int x : a ){
             numberList.add(x);
