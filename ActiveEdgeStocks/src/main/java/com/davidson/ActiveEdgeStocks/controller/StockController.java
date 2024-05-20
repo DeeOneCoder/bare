@@ -56,4 +56,12 @@ public class StockController {
         newStock.addObject("freshStock", freshStock);
         return getAllStock();
     }
+
+    @PostMapping("/stocks/{id}")
+    public ModelAndView createStock(@PathVariable int id, @ModelAttribute Stock freshStock){
+        ModelAndView newStock = new ModelAndView("new-stock");
+        Stock stock = stockService.updateStock(id, freshStock);
+        newStock.addObject("freshStock", freshStock);
+        return getAllStock();
+    }
 }
