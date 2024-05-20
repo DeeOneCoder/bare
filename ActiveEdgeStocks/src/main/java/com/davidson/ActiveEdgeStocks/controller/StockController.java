@@ -33,7 +33,7 @@ public class StockController {
 
     @GetMapping("/stocks/{id}")
     public ModelAndView getAllStock(@PathVariable int id){
-        ModelAndView singleStock = new ModelAndView("stock-d");
+        ModelAndView singleStock = new ModelAndView("update-stock");
         Stock stock = stockService.getSingleStock(id);
         singleStock.addObject("stock", stock);
         return singleStock;

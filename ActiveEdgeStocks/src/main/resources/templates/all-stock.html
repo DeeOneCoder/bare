@@ -5,7 +5,7 @@
     <title>Stock List</title>
 </head>
 <body>
-<div class="container">
+<div class="container main">
     <h2>Stock List</h2>
     <hr/>
     <a th:href="@{/api/stocks-f}" class="btn btn-primary mb-2">Add Stock</a><br/>
@@ -27,7 +27,7 @@
             <td th:text="${stock.createDate}"> </td>
             <td th:text="${stock.lastUpdate}"> </td>
             <td>
-                <a th:href="@{/api/stocks/stock.id}" class="btn btn-success">Update</a>
+                <a th:href="@{/api/stocks/{id}(id=${stock.id})}" class="btn btn-success">Update</a>
             </td>
         </tr>
 

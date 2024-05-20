@@ -12,7 +12,6 @@
     <h2>Add Stock Form</h2>
     <hr/>
     <form th:action="@{/api/stocks}" th:object="${stock}" method="post">
-        <div><input type="text" th:field="*{id}" placeholder="Enter name" class="form-control mb-4 col-md-4" hidden="hidden"></div>
         <input type="text" th:field="*{name}" placeholder="Enter name" class="form-control mb-4 col-md-4">
         <input type="text" th:field="*{currentPrice}" placeholder="Enter email" class="form-control mb-4 col-md-4">
 <!--        <input type=date th:field="*{createDate}" placeholder="Enter department" class="form-control mb-4 col-md-4">-->
